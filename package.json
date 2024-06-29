@@ -1,10 +1,20 @@
 {
   "name": "backend-repo",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
     "dev": "nodemon ./core/app.ts"
+  },
+  "engines": {
+    "node": "20"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +24,9 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/node": "^20.14.9",
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0",
     "typescript": "^5.5.2"
   },
   "dependencies": {
@@ -24,6 +37,8 @@
     "express": "^4.19.2",
     "firebase": "^10.12.2",
     "firebase-admin": "^12.2.0",
+    "firebase-functions": "^5.0.0",
     "zod": "^3.23.8"
-  }
+  },
+  "private": true
 }

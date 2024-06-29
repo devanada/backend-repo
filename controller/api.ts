@@ -37,12 +37,12 @@ export const updateUserData = async (req: Request, res: Response) => {
 
     return res.status(200).json({
       message: "Update user successfully",
+      data: body,
     });
   } catch (err) {
     if (err instanceof ApiError) {
       res.status(err.statusCode).json({ message: err.message });
     } else {
-      console.error(err);
       res.status(500).json({ message: "Internal server error" });
     }
   }

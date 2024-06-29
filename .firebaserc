@@ -1,0 +1,10 @@
+{
+  "projects": {
+    "default": "devanada-e9c28"
+  },
+  "dataconnectEmulatorConfig": {
+    "postgres": {
+      "localConnectionString": "postgresql://localhost:5432?sslmode=disable"
+    }
+  }
+}
